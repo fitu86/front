@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<% include partials/head %>
+<% include top-component/tablero %>
+</head>
+<body>
+<% include partials/navigation %>
+
+            <div class="content-wrapper">
+                <div class="content-header row">
+                    <div class="content-header-left col-md-6 col-12 mb-2">
+                        <h3 class="content-header-title mb-0">POS Dashboard</h3>
+                        
+                        <div class="row breadcrumbs-top">
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    
+                                    <li class="breadcrumb-item active">
+                                        Dashboard
+                                    </li>
+                                    
+                                </ol>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-2 col-12">
+                        <div class="hidden" id="ddlCountry">
+                            <div class="ddOutOfVision" id="countries_msddHolder" style="height: 0px; overflow: hidden; position: absolute;"><select name="countries" id="countries" style="width: auto;">
+                                <option value="mx" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag mx" data-title="Mexico">Mexico</option>
+                                <option value="br" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag br" data-title="Brazil">Brazil</option>
+                                <option value="co" data-image="images/msdropdown/icons/blank.gif" data-imagecss="flag co" data-title="Colombia">Colombia</option>
+                            </select></div><div class="dd ddcommon borderRadius" id="countries_msdd" style="width: auto;"><div class="ddTitle borderRadiusTp"><span class="divider"></span><span class="arrow arrowoff"></span><span class="ddTitleText " id="countries_title"><img src="images/msdropdown/icons/blank.gif" class="flag mx fnone"><span class="ddlabel">Mexico</span><span class="description" style="display: none;"></span></span></div><input id="countries_titleText" type="text" autocomplete="off" class="text shadow borderRadius" style="display: none;"><div class="ddChild ddchild_ border shadow" id="countries_child" style="z-index: 9999; display: none; position: absolute;"><ul><li class="enabled _msddli_ selected" title="Mexico"><img src="images/msdropdown/icons/blank.gif" class="flag mx fnone"><span class="ddlabel">Mexico</span><div class="clear"></div></li><li class="enabled _msddli_" title="Brazil"><img src="images/msdropdown/icons/blank.gif" class="flag br fnone"><span class="ddlabel">Brazil</span><div class="clear"></div></li><li class="enabled _msddli_" title="Colombia"><img src="images/msdropdown/icons/blank.gif" class="flag co fnone"><span class="ddlabel">Colombia</span><div class="clear"></div></li></ul></div></div>
+                        </div>
+                    </div>
+                    <div class="content-header-right col-md-4 col-12">
+                        
+                    </div>
+                </div>
+               
+                
+    
+
+    
+
+   
+
+    <input type="hidden" id="pageName" value="dashboard">
+
+    <div class="content-body">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 nopadding" id="dashboard">
+
+            <div class="col-lg-12 col-md-12 col-sm-12 nopadding overAuto mgb10">
+
+                <div class="col-lg-6 col-md-6 col-sm-6 nopadding leftDiv">
+                    <h1 class="text-bold-500 leftDiv">Datos basados en los últimos 7 días</h1>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 nopadding rightDiv">
+                    <label class="fntbld600" style="font-size: 22px;">USUARIO: </label>
+                    <select name="ctl00$MainContent$ddlStore" onchange="javascript:setTimeout('__doPostBack(\'ctl00$MainContent$ddlStore\',\'\')', 0)" id="MainContent_ddlStore" class="form-control rightDiv" aria-labelledby="dropdown-flag">
+	<option selected="selected" value="12288972">AUTOPARTES PRIME</option>
+
+</select>
+                </div>
+
+            </div>
+
+
+            
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-primary bg-darken-2">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="far fa-eye" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-primary white media-body">
+                                    <h4>Visitas</h4>
+                                    <h2 class="text-bold-400 mb-0">1033</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-danger bg-darken-2">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="fas fa-cart-plus" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-danger white media-body">
+                                    <h4>Ordenes</h4>
+                                    <h2 class="text-bold-400 mb-0">5</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-warning bg-darken-2">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="fas fa-shipping-fast" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-warning white media-body">
+                                    <h4>Envíos</h4>
+                                    <h2 class="text-bold-400 mb-0">5</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-success bg-darken-2">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="fas fa-hourglass-end" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-success white media-body">
+                                    <h4>Envíos Retrasados</h4>
+                                    <h2 class="text-bold-400 mb-0">0.00</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <!--
+                --
+                --
+                -- GRAFICA PRINCIPAL.
+                --
+                --
+            -->
+            <div class="row">
+                <div class="col-8">
+                    <!--  h-auto-->
+                    <div class="card-custom h-100" id="card_not">
+                        <!--  h-100 -->
+                        <div class="card-header d-flex">
+                            <!--  justify-content-between -->
+                            <h3 class="text-nold-500 mr-5 pr-5">Promedio total de <span id="subtitle" style="text-transform: lowercase;">Ordenes</span>: <span class="primary text-nold-650" id="average">1</span></h3>
+                            <!--  fntbld600 ft18 -->
+                            <div class="d-flex justify-content-between heading-elements">
+                                <div class="pb-1 mr-3 form-group">
+                                    <!--a class="bg-transparent dropdown-toggle" role="button" data-toggle="dropdown" id="ddlType">ORDENES</a-->
+                                    <select class="bg-transparent ddlDashboard dropdown-toggle form-control" id="ddlType">
+                                        <option class="dropdown-item" value="1">Ordenes</option>
+                                        <option class="dropdown-item" value="2">Preguntas</option>
+                                        <option class="dropdown-item" value="3">Envios</option>
+                                        <option class="dropdown-item" value="4">Reclamos</option>
+                                    </select>
+                                </div>
+                                <div class="pb-1 form-group">
+                                    <!--a class="bg-transparent dropdown-toggle" role="button" data-toggle="dropdown" id="ddlDays">07 Días</a-->
+                                    <select class="bg-transparent ddlDashboard form-control" data-toggle="dropdown" id="ddlDays">
+                                        <option class="dropdown-item" value="7">7 días</option>
+                                        <option class="dropdown-item" value="15">15 días</option>
+                                        <option class="dropdown-item" value="30">30 días</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="card-body">
+                                <div id="products-sales" style="position: relative; -webkit-tap-highlight-color: rgba(0 ,0,0,0);"><svg height="342" version="1.1" width="754" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.140625px; top: -0.1875px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="29.5" y="307" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#2dcee3" d="M42,307H729.438" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="29.5" y="236.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0.5</tspan></text><path fill="none" stroke="#2dcee3" d="M42,236.5H729.438" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="29.5" y="166" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1</tspan></text><path fill="none" stroke="#2dcee3" d="M42,166H729.438" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="29.5" y="95.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">1.5</tspan></text><path fill="none" stroke="#2dcee3" d="M42,95.5H729.438" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="29.5" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2</tspan></text><path fill="none" stroke="#2dcee3" d="M42,25H729.438" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="614.865" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7.5)"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2021-10-09</tspan></text><text x="385.719" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7.5)"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2021-10-06</tspan></text><text x="156.57299999999998" y="319.5" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,7.5)"><tspan dy="4.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2021-10-05</tspan></text><rect x="116.47245" y="25" width="80.2011" height="282" rx="0" ry="0" fill="#00a5a8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="345.61844999999994" y="25" width="80.2011" height="282" rx="0" ry="0" fill="#00a5a8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect><rect x="574.76445" y="166" width="80.2011" height="141" rx="0" ry="0" fill="#00a5a8" stroke="none" fill-opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 1;"></rect></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- PANEL DE NOTIFICACIONES -->
+                <div class="col-4" id="div_not">
+                    <!-- my-auto h-auto -->
+                    <div class="Card-custom h-100" style="box-shadow: 0 10px 40px 0 rgba(62,57,107,.07), 0 2px 9px 0 rgba(62,57,107,.06);">
+                        <!-- h-100 -->
+                        <div class="card-header">
+                            <h3 class="text-bold-500">Notificaciones</h3>
+                        </div>
+
+                        <div class="card-content px-1 pb-1">
+                            <div id="DashboardNotifications" class="scrollable-container media-list height-400 position-relative ps-container ps-theme-dark" data-ps-id="34927fc5-f260-fc06-19e9-7a92a09410f9"><div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                            <!--position-relative height-450 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <!------------------------------------------------ PANEL 1 -->
+            <div class="row">
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card-custom">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-primary bg-darken-4 font-large-2">
+                                    
+                                    <h1 class="" style="color: white;"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-primary white media-body">
+                                    <h3>Reclamos</h3>
+                                    <h1 class="text-bold-400 mb-0">0 (0.00%)</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-danger bg-darken-4 font-large-2">
+                                    
+                                    <h1 class="" style="color: white;"><i class="fas fa-question" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-danger white media-body">
+                                    <h3>Preguntas</h3>
+                                    <h1 class="text-bold-400 mb-0">0</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-warning bg-darken-4">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="far fa-credit-card" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-warning white media-body">
+                                    <h3>Pagos</h3>
+                                    <h1 class="text-bold-400 mb-0">7850.00</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="media align-items-stretch">
+                                <div class="p-2 text-center bg-success bg-darken-4">
+                                    
+                                    <h1 class="display-5" style="color: white;"><i class="fas fa-dollar-sign" aria-hidden="true"></i></h1>
+                                </div>
+                                <div class="p-2 bg-gradient-x-success white media-body">
+                                    <h3>Pago Promedio</h3>
+                                    <h1 class="text-bold-400 mb-0">1570.00</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            
+            <!--
+                --NUEVO FORMATO DE TABLAS                ----------PANEL 2
+                --
+             -->
+            <br>
+
+            <div class="col-md-12 nopadding">
+                <div class="col-md-12">
+                    <div class="card-custom">
+                        <!--div class="card-header"><h2>Titulo</h2></div-->
+                        <div id="project-info" class="card-body row bg-white">
+
+                            <div class="project-info-count col-lg-4 col-md-12 border-right-blue-grey border-right-lighten-5">
+                                <div class="project-info-icon bg-gradient-x-danger">
+                                    <h1 class="white">0%</h1>
+                                    <div class="project-info-sub-icon danger"><span class="fa fa-user-o" aria-hidden="true"></span></div>
+                                </div>
+                                <div class="project-info-text pt-1 danger">
+                                    <h3>Preguntas Por Visita</h3>
+                                </div>
+                            </div>
+                            <div class="project-info-count col-lg-4 col-md-12 border-right-blue-grey border-right-lighten-5">
+                                <div class="project-info-icon bg-info">
+                                    <h1 class="white">0.48%</h1>
+                                    <div class="project-info-sub-icon"><span class="fa fa-calendar-check-o info" aria-hidden="true"></span></div>
+                                </div>
+                                <div class="project-info-text pt-1 info">
+                                    <h3>Ordenes Por Visita</h3>
+                                </div>
+                            </div>
+                            <div class="project-info-count col-lg-4 col-md-12">
+                                <div class="project-info-icon bg-gradient-x-warning">
+                                    <h1 class="white">0%</h1>
+                                    <div class="project-info-sub-icon warning"><span class="fa fa-flag" aria-hidden="true"></span></div>
+                                </div>
+                                <div class="project-info-text pt-1 warning">
+                                    <h3>Ordenes Por Pregunta</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <!-- NUEVA SECCION DE NOVEDADES -->
+            <br>
+
+            <div class="row match-height">
+                <div class="col-xl-8 col-lg-12">
+                    <div class="card-custom">
+                        <div class="card-header">
+                            <h3 class="text-bold-500">Novedades Mercado Libre</h3>
+                        </div>
+                        <div class="card-content px-1 position-relative">
+                            <div id="NoticesDiv" class="scrollable-container media-list height-350 position-relative ps ps--active-y ps-container ps-theme-dark" data-ps-id="f9d5f2c6-a8e4-289b-b843-74ab7ddc617f"><p class="noRecord">¡No se encontraron registros para mostrar!</p><div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-6 col-md-12">
+                    <!--  w-100 -->
+                    <div class="card-custom">
+                        <div class="card-header">
+                            <h3 class="text-bold-500">Total de ventas en los ultimos 3 meses</h3>
+                        </div>
+                        <div class="card-body height-350">
+                            <div id="donut-chart" style="position: relative;" class="height-300"><svg height="300" version="1.1" width="344" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.59375px; top: -0.1875px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#6f42c1" d="M172.1015,243.33333333333331A93.33333333333333,93.33333333333333,0,0,0,245.13445368954754,208.11453162928797" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#6f42c1" stroke="#ffffff" d="M172.1015,246.33333333333331A96.33333333333333,96.33333333333333,0,0,0,247.48194148671155,209.98249871737224L277.7384508723813,234.05851896379153A135,135,0,0,1,172.1015,285Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#007fff" d="M245.13445368954754,208.11453162928797A93.33333333333333,93.33333333333333,0,0,0,136.70254478371822,63.64014195989674" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#007fff" stroke="#ffffff" d="M247.48194148671155,209.98249871737224A96.33333333333333,96.33333333333333,0,0,0,135.56472122319488,60.86428938003627L120.89943977644958,25.08663390627919A135,135,0,0,1,277.7384508723813,234.05851896379153Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#ff7588" d="M136.70254478371822,63.64014195989674A93.33333333333333,93.33333333333333,0,0,0,172.07217846904882,243.333328727518" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#ff7588" stroke="#ffffff" d="M135.56472122319488,60.86428938003627A96.33333333333333,96.33333333333333,0,0,0,172.07123599126825,246.3333285794739L172.05751770357324,289.999993091277A140,140,0,0,1,119.00306717557734,20.460212939845093Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="172.1015" y="140" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(2.1212,0,0,2.1212,-192.9623,-169.303)" stroke-width="0.4714285714285715"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">agosto</tspan></text><text x="172.1015" y="160" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(1.9444,0,0,1.9444,-162.5403,-143.5556)" stroke-width="0.5142857142857143"><tspan dy="5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">52,796</tspan></text></svg></div>
+                            <!-- class="height-250" -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            
+        </div>
+
+    </div>
+
+    
+
+    
+
+
+          
+<% include bottom-component/tablero %>
+
+ </div>
+
+<% include partials/footer %>
+
+</body>
+</html>
