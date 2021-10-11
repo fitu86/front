@@ -1,3 +1,7 @@
+<% include partials/head %>
+<% include style/tablero %>
+<% include partials/navigation %>
+
 <div class="app-content content">
             <div class="content-wrapper">
                 <div class="content-header row">
@@ -402,14 +406,12 @@
 
     
 
-    <!--script src="js/doughnut-simple.js"></script-->
-    <script src="js/raphael-min.js"></script>
-    <script src="js/morris.min.js"></script>
-    <script src="js/NewDashboard.js"></script>
-    <script>
-        $(".blockUISection").addClass("hidden");
-    </script>
+    
 
 
-            </div>
+          
+
+<% include script/tablero %>
+  </div>
         </div>
+<% include partials/footer %>
