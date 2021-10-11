@@ -1,10 +1,9 @@
-const express = require('express')
-const app = express();
+const app = require('./app');
 
-app.get('/', (req, res) => {
-  res.send('Hola mundo!')
-});
 
-app.listen(8000, () => {
-  console.log('Example app listening on port 8000!')
-});
+async function main() {
+    await app.listen(app.get('port'));
+    console.log('Server on port', app.get('port'));
+}
+
+main();
